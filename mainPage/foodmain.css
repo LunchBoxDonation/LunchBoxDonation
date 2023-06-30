@@ -1,3 +1,98 @@
+/* d */
+#stickyDiv {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transform: translate(-50%, -70%);
+    /* position: sticky; */
+    top: 0;
+    padding: 10px;
+    /* margin-left: 1613px; */
+    width: 100px; /* 원하는 넓이 설정 */
+    float: right; /* 오른쪽에 배치 */
+    text-align: center; /* 내용 가운데 정렬 */
+    z-index: 9999;
+    margin-top: 840px;
+    margin-left: 1750px;
+    height: 400px;
+  }
+#stickyDiv > a{
+    margin-bottom: 30px;
+  }
+
+.stickyItem1{
+   background-image: url(https://file.rankingdak.com/image/RANK/BANNER/AR_CLOSE/20230419/IMG1681IJX890452208.png);
+   height: 94px;
+   max-width: 91%;
+   border-radius: 15px;
+}
+.stickyItem2{
+   background-image: url(https://file.rankingdak.com/image/RANK/BANNER/AR_IMG_1/20230419/IMG1681Xyy890561004.png);
+   height: 94px;
+   max-width: 91%;
+   border-radius: 15px;
+}
+.stickyItem3{
+   background-image: url(https://file.rankingdak.com/image/RANK/BANNER/AR_IMG_1/20230419/IMG1681UfY890476355.png);
+   height: 94px;
+   max-width: 91%;
+   border-radius: 15px;
+}
+
+.stickyItem4{
+    line-height: 25px;
+    background-color: #f1f1f1;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.stickyItem4 > img{
+    margin-top: 11px;
+}
+
+
+.category-container {
+    position: relative;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 17px;
+    font-size: 18px;
+    font-weight: bolder;
+    z-index: 4;
+  }
+  
+
+
+
+  
+  .items-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 22px;
+    border-radius: 15px;
+    white-space: nowrap; /* 항목들이 가로로 나열되도록 설정 */
+  }
+  
+  .item {
+    display: inline-block; /* 항목들이 가로로 나열되도록 설정 */
+    padding: 5px;
+  }
+  
+  .show {
+    display: block !important; /* 항목들이 계속 보이도록 설정 */
+  }
+
+.ttt .item{
+    margin-right: 37px;
+}
+.ttt{
+    margin-right: -35px;
+}
+
 /* 팝업 창 */
 #divpop{
     transform: translate(-50%, -50%);
@@ -12,6 +107,470 @@
     margin-left: 452px;
 }
 /* 팝업 창 */
+
+/* slide */
+section.container {
+    margin: 0 auto;
+    width: 90vw;
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+}
+
+div.banner {
+    width: 540vw;
+    /* transform: translate(-90vw); */
+    transition: transform 0.5s;
+}
+
+div.img {
+    width: 90vw;
+    float: left;
+}
+
+div.img img {
+    width: 100%;
+    display: block;
+}
+
+ div.arrow {
+    position: absolute;
+    font-size: 2rem;
+    z-index: 1;
+    width: 25px;
+    height: 7%;
+    top: 328px;
+    margin-left: 754px;
+    margin-right: 755px;
+    border-radius: 29px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40vh;
+    color: #00000070;
+    background-color: #00000021;
+} 
+
+#arrow-prev{
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/ico_slide_ctrl.png");
+    background-size: 118px;
+    background-position: -4% center;
+}
+
+#arrow-next{
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/ico_slide_ctrl.png");
+    background-size: 118px;
+    background-position: 17% center;
+}
+
+div.next {
+    right: 0;
+}
+
+.btn{
+    border-radius: 5px;
+    background-color: #00000021;
+    opacity: 0.7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+div.btns {
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
+    width: 90vw;
+}
+/* slide */
+
+
+
+
+/* category */
+
+#category-box-1{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 370px;
+    margin-top: 91px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-1{
+    display: block;
+    width: 58px;
+    height: 52px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: 2px 4px;
+}
+#category-box-2{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 490px;
+    margin-top: -70px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-2{
+    display: block;
+    width: 58px;
+    height: 61px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -117px 5px;
+}
+#category-box-3{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 610px;
+    margin-top: -70px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-3{
+    display: block;
+    width: 58px;
+    height: 61px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -173px 6px;
+}
+#category-box-4{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 730px;
+    margin-top: -65px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-4{
+    display: block;
+    width: 58px;
+    height: 61px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -115px -115px;
+}
+#category-box-5{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 850px;
+    margin-top: -68px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-5{
+    display: block;
+    width: 58px;
+    height: 62px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -233px 4px;
+}
+#category-box-6{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 970px;
+    margin-top: -68px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-6{
+    display: block;
+    width: 58px;
+    height: 62px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -58px -55px;
+}
+#category-box-7{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 1090px;
+    margin-top: -68px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-7{
+    display: block;
+    width: 58px;
+    height: 62px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -118px -55px;
+}
+#category-box-8{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 1210px;
+    margin-top: -68px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-8{
+    display: block;
+    width: 58px;
+    height: 62px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -233px -171px;
+}
+#category-box-9{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 1330px;
+    margin-top: -68px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-9{
+    display: block;
+    width: 58px;
+    height: 52px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -118px -171px;
+}
+#category-box-10{
+    background-color: #f8f8f8;
+    width: 86px;
+    height: 68px;
+    margin-left: 1450px;
+    margin-top: -68px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+#category-img-10{
+    display: block;
+    width: 58px;
+    height: 62px;
+    margin: auto;
+    background-image: url("https://www.rankingdak.com/resources/pc/images/icon/category-ico-compilation.png?ver=20230425");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: -59px -170px;
+}
+
+
+#category-comment{
+    font-size: 14px;
+    display: block;
+    margin-top: 18px;
+    margin-left: 19px;
+    width: 100px;
+    cursor: pointer;
+}
+
+/* category */
+
+.md-pick{
+    font-size: 29px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 140px;
+    word-spacing: -4px;
+}
+
+/* img x 4 category */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 20px; /* 이미지 사이의 간격을 조절할 수 있는 부분 */
+  margin-top: 83px;
+  }
+
+  .image {
+  max-width: 254px;
+  max-height: 100%;
+  margin-right: 48px; /* 이미지 간의 간격을 조절할 수 있는 부분 */
+  border-radius: 15px;
+  }
+
+  .image-wrapper {
+    text-align: center;
+    margin-right: 0px; /* 이미지 간격 조정 */
+  }
+
+  .image:last-child .image-wrapper {
+    margin-right: 0; /* 마지막 이미지의 간격은 0으로 설정 */
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: -29px;
+  }
+
+  .navigation-button-prev {
+    margin: 163px 608px;
+    padding: 7px 11px;
+    background-color: white;
+    border-radius: 13px;
+    border: #e0e0e0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    margin-top: -247px;
+  }
+  .navigation-button-next {
+    margin: 163px 608px;
+    padding: 7px 11px;
+    background-color: white;
+    border-radius: 13px;
+    border: #e0e0e0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    margin-top: -247px;
+  }
+
+
+
+  .description {
+    text-align: center;
+    font-weight: bold;
+    margin-left: -52px;
+    font-size: 17px;
+    word-spacing: 1px;
+  }
+  .description3 {
+    text-align: left;
+    font-weight: bold;
+    margin-left: -5px;
+    font-size: 15px;
+    word-spacing: 1px;
+    width: 200px;
+  }
+/* img x 4 category */
+
+.time-sale{
+    position: absolute;
+    left: 355px;
+    top: 1360px;
+    width: 300px;
+}
+.time-sale-img{
+    background: url("https://www.rankingdak.com/resources/pc/images/icon/ico_timesale_title.png") no-repeat 0 center / 34px;
+    background-position: 4px;
+}
+.time-sale > h2 > span{
+    font-weight: bolder;
+    font-size: 27px;
+    letter-spacing: -1px;
+}
+
+/* img x 2 category */
+.image-container2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 20px; /* 이미지 사이의 간격을 조절할 수 있는 부분 */
+  margin-top: 70px;
+  margin-right: 339px;
+  }
+
+  .image2 {
+  max-width: 340px;
+  max-height: 100%;
+  margin-right: 48px; /* 이미지 간의 간격을 조절할 수 있는 부분 */
+  border-radius: 15px;
+  height: 209px;
+  }
+
+  .image-wrapper2 {
+    text-align: center;
+    margin-right: 0px; /* 이미지 간격 조정 */
+  }
+
+  .image:last-child .image-wrapper2 {
+    margin-right: 0; /* 마지막 이미지의 간격은 0으로 설정 */
+  }
+
+  .navigation-buttons2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: -29px;
+  }
+
+  .navigation-button-prev2 {
+    margin: 163px 608px;
+    padding: 7px 11px;
+    background-color: white;
+    border-radius: 13px;
+    border: #e0e0e0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    margin-top: -247px;
+  }
+  .navigation-button-next2 {
+    margin: 163px 167px;
+    padding: 7px 11px;
+    background-color: white;
+    border-radius: 13px;
+    border: #e0e0e0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    margin-top: -247px;
+  }
+
+
+  .description2 {
+    /* text-align: center; */
+    font-weight: bold;
+    margin-left: 12px;
+    font-size: 14px;
+    word-spacing: -1px;
+    text-align: left;
+    /* word-break: break-all; */
+  }
+
+  .innerDivElement2{
+      color: rebeccapurple;
+  }
+/* img x 2 category */
+
+
 
 
 html, body {
@@ -113,6 +672,7 @@ a{
     color: #555;
     text-align: left;
     background: transparent;
+    border: none;
 }
 
 .top-search .btn-top-search {
@@ -329,12 +889,18 @@ ol, ul {
 }
 
 /* div class gnb-wrap */
+.gnb-test{
+    position: sticky;
+    top: 0px; /* 도달했을때 고정시킬 위치 */
+    z-index: 601;
+}
 .gnb-wrap {
     width: 100%;
     border-bottom: 1px solid #eee;
     background: #fff;
-    z-index: 101;
+    z-index: 600;
 }
+
 
 .gnb-wrap .inner {
     display: flex;
@@ -387,7 +953,7 @@ ol, ul {
     display: flex;
     justify-content: space-between;
     margin-top: -31px;
-    margin-left: 58px;
+    margin-left: -54px;
 }
 
 .gnb-wrap .inner:after, .gnb-wrap:after, .gnb-wrap .gnb > ul {
@@ -602,6 +1168,169 @@ img {
     left: -11px;
 }
 /* 슬라이드 */
+
+
+/* 테마별 추천 상품 */
+.theme-recommend{
+    font-size: 27px;
+    text-align: center;
+    word-spacing: -2px;
+    font-weight: bold;
+    margin-top: 45px;
+}
+.theme-recommend-div{
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+.theme-recommend-div > button{
+    width: 190px;
+    /* background-color: #f8f8f8; */
+    height: 42px;
+    border-radius: 40px;
+    line-height: -40px;
+    line-height: 3;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* 테마별 추천 상품 */
+
+/* 인기 카테고리 상품 */
+.theme-recommend2{
+    font-size: 27px;
+    text-align: center;
+    word-spacing: -6px;
+    font-weight: bold;
+    margin-top: 45px;
+}
+.theme-recommend-div2{
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+.theme-recommend-div2 > button{
+    width: 190px;
+    /* background-color: #f8f8f8; */
+    height: 42px;
+    border-radius: 40px;
+    line-height: -40px;
+    line-height: 3;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* 인기 카테고리 상품 */
+
+/* video */
+.my-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .my-left-div {
+    width: 685px;
+    margin-left: -332px;
+    margin-top: 221px;
+    padding: 3px;
+    
+  }
+  
+  .my-left-div > img{
+    border-radius: 20px;
+    max-width: none;
+    height: 481px;
+    margin-left: -60px;
+    margin-top: 7px;
+  }
+  .selected-button {
+    background-color: #333;
+    color: white;
+}
+.my-left-div > div{
+    background-color: red !important;
+}
+
+ .context {
+    padding: 22px 22px 20px;
+    background: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.8);
+    border-radius: 5px;
+    width: 368px;
+    margin-top: -120px;
+    /* margin-top:-20px; */
+    margin-left: 230px;
+}
+.context .title {
+    font-size: 19px;
+    font-weight: bold;
+    display: block;
+    letter-spacing: -0.2px;
+    line-height: 22px;
+}
+.context .text {
+    margin-top: 6px;
+    color: #666;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    font-size: 13px;
+}
+
+  .my-right-divs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 263px;
+    margin-left: 15px;
+    align-items: flex-start;
+  }
+
+  .my-right-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 76px;
+    margin-bottom: 47px;
+  }
+
+ .my-right-div > span{
+    width: 432px;
+    margin-left: 570px;
+    word-spacing: -2px;
+    font-weight: bolder;
+ }
+ .my-right-div > img{
+   border-radius: 10px; 
+ }
+.my-top-div{
+    margin-top: -102px;
+    width: 500px;
+    font-size: 13px;
+ }
+
+.my-bottom-div {
+    margin-top: 66px;
+    font-size: 16px;
+}
+
+/* video */
+
+.orange-members > img{
+    margin-left: 380px;
+    margin-top: 290px;
+    border-radius: 10px;
+}
+
+
+
 
 
 
