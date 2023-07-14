@@ -6,11 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="mypage.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="../header-footer/header-footer.js"></script>
     <title>Document</title>
 </head>
 <body>
 <section id="contents" class="container">
-
   <div class="content-wrap">
     <div class="frame-full head-mypage">
       <h2 class="blind">마이페이지</h2>
@@ -171,6 +172,96 @@
             alert(benefitsAlertMsg);
           }
         });
+
+        $(document).ready(function(){
+          if(get_cookie("closePoint") != "done"){
+            pointAlert();
+          }
+        })
+        function pointAlert(){
+          setTimeout(()=>{
+            if($(window).scrollTop() > 150){
+              $("#pointAlert").css("position","fixed");
+              $("#pointAlert").animate({"top":"70px"})
+            }
+            else if($(".all-depth-cate").css("display") != "block"){
+              $("#pointAlert").animate({"top":"15px"})
+            }
+
+            $(window).on('load scroll', function() {
+              if ($('#pointAlert').length > 0 && $('#pointAlert').css("display") == "block") { pointAlertScroll();}
+            });
+            setTimeout(()=>{
+              $("#pointAlert").animate(
+                      {"top":"-100px"},
+                      1000,
+                      function(){
+                        $("#pointAlert").remove();
+                      });
+            },5000)
+          },1000)
+        }
+
+        var lastScrollTop = 0;
+        function pointAlertScroll(){
+          var winS = $(window).scrollTop();
+          var gnbw = $('.gnb-wrap'),
+                  gnbPosition = gnbw.position();
+          var $header= $('.header'),
+                  $headerP = $header.offset().top,
+                  $headerH = $header.height();
+
+          if(winS > lastScrollTop) { //downscroll
+
+            if( winS > gnbPosition.top){
+              // fix 생김
+              $("#pointAlert").css({"position":"fixed"});
+            } else {
+              // fix 지움
+              $("#pointAlert").css({"position":"absolute"})
+            }
+          } else { //upscroll
+
+            if( winS < $headerP + $headerH){
+              // fix 지움
+              $("#pointAlert").css({"position":"absolute"})
+              if($("#pointAlert").css("top") == "70px"){
+                $("#pointAlert").css("top","15px");
+              }
+            } else{
+              // fix 생김
+              $("#pointAlert").css({"position":"fixed"});
+              if($("#pointAlert").css("top") == "15px"){
+                $("#pointAlert").css("top","70px");
+              }
+            }
+          }
+          lastScrollTop = winS;
+        }
+
+
+
+        function closePoint(cookieNm, expiredays) {
+          setCookiePointAlert( cookieNm, "done" , expiredays);
+          $("#pointAlert").animate({"top":"-100px"});
+        }
+
+        function setCookiePointAlert( name, value, expiredays ) {
+          var todayDate = new Date();
+          todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
+          if ( todayDate > new Date() )
+          {
+            expiredays = expiredays - 1;
+          }
+          todayDate.setDate( todayDate.getDate() + expiredays );
+          document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+        function get_cookie(name) {
+          var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+          return value? value[2] : null;
+        }
+
+
 
       </script></div>
     <div class="frame-sm">
@@ -371,11 +462,11 @@
           </div>
         </div><!--// frame-cnt-inner -->
       </div><!--// content-wrap -->
-      <form id="command" name="deliveryPop" action="/mypage/main" method="post"><input type="hidden" name="actionFlag" value="M">
+      <form id="command" name="deliveryPop" action="/mypage/main?imageUrl=https%3A%2F%2Ffile.rankingdak.com" method="post"><input type="hidden" name="actionFlag" value="M">
         <input type="hidden" name="vDeliveryid">
         <input type="hidden" name="vOrderCd">
         <div>
-          <input type="hidden" name="_csrf" value="c9e72396-f442-4581-a078-bc21282e03b3">
+          <input type="hidden" name="_csrf" value="944ed213-67d0-49b6-888b-3222f3011bb5">
         </div></form><div class="layer-wrap" id="modal-my-delivery" style="display: none"></div>
       <script type="text/javascript">
         $('.member-ext').on('click',function(){
