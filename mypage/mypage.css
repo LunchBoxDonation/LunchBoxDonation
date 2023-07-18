@@ -889,6 +889,7 @@ address, caption, strong[lang=en], em, cite, b {font-weight:normal; font-style:n
 label, select, input, textarea {vertical-align:middle; }
 [class^="ico-bl-"]{display:inline-block; background-image:url("/mypage/images/ico_bullet.png");}
 
+
 /* 사용자 에이전트 스타일시트 */
 h5 {
     display: block;
@@ -975,9 +976,11 @@ input[type="hidden" i] {
     padding: initial;
     border: initial;
 }
+
 input[type="text" i] {
     padding: 1px 2px;
 }
+
 form {
     display: block;
     margin-top: 0em;
@@ -1137,6 +1140,7 @@ a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
 }
+
 label {
     cursor: default;
 }
@@ -1226,6 +1230,30 @@ label, select, input, textarea {vertical-align:middle; }
 .form-inline-list [class*="custom-"] .radio + label{ font-size:14px;}
 .form-inline-list.col7 > li{display:inline-block; min-width:13.9%;}
 .form-inline-list > li{display:inline-block}
+=======
+/* ========================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
