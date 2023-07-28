@@ -8,37 +8,37 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @Slf4j
 public class ActivityController {
-    @RequestMapping("mypage")
+    @RequestMapping("activity_brand")
     public ModelAndView activity_brand(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/activity_brand");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("activity_inquiry_details")
     public ModelAndView activity_inquiry_details(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/activity_inquiry_details");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("activity_interview")
     public ModelAndView activity_interview(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/activity_interview");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("activity_likes")
     public ModelAndView activity_likes(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/activity_likes");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("activity_recently")
     public ModelAndView activity_recently(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/activity_recently");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("activity_review")
     public ModelAndView activity_review(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/activity_review");

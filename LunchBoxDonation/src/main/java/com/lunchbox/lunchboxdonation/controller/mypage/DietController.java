@@ -8,13 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @Slf4j
 public class DietController {
-    @RequestMapping("mypage")
+    @RequestMapping("diet_list")
     public ModelAndView diet_list(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/diet_list");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("diet_registration")
     public ModelAndView diet_registration(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/diet_registration");

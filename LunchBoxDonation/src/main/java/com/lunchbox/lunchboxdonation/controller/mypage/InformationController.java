@@ -9,13 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Slf4j
 public class InformationController {
 
-    @RequestMapping("mypage")
+    @RequestMapping("information_crystal")
     public ModelAndView information_crystal(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/information_crystal");
         return mv;
     }
-    @RequestMapping("mypage")
+    @RequestMapping("information_shipping_address")
     public ModelAndView information_shipping_address(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mypage/information_shipping_address");
