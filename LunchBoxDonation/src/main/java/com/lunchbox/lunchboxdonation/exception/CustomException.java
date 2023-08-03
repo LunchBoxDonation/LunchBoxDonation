@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 public class CustomException extends RuntimeException {
 
-    private final java.lang.Error error;
+    private final Error error;
 
     @Override
     public String getMessage() {

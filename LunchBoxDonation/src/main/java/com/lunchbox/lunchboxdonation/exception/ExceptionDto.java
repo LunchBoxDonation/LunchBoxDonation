@@ -17,7 +17,7 @@ public class ExceptionDto {
     private Map<String,String> error = new HashMap<>();
 
 
-    public ExceptionDto(Boolean success, String response, java.lang.Error error){
+    public ExceptionDto(Boolean success, String response, Error error){
         this.success = success;
         this.response = response;
         this.error.put("status", error.getStatus());

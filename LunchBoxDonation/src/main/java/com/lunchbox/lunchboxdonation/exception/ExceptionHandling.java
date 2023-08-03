@@ -1,8 +1,5 @@
 package com.lunchbox.lunchboxdonation.exception;
 
-import com.sparta.petplace.common.ApiResponseDto;
-import com.sparta.petplace.common.ErrorResponse;
-import com.sparta.petplace.common.ResponseUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
