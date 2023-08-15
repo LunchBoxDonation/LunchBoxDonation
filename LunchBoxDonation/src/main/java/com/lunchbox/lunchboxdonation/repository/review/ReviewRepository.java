@@ -12,4 +12,5 @@ import java.util.List;
 public interface ReviewRepository extends JpaRepository<Review,Long> {
     @Query("SELECT r FROM Review r JOIN FETCH r.member JOIN FETCH r.lunchbox ORDER BY r.createdAt DESC")
     List<Review> findAllReviews(Pageable pageable);
+
 }
