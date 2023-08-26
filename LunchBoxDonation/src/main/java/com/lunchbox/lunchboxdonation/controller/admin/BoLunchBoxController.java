@@ -34,14 +34,15 @@ public class BoLunchBoxController {
     private final LunchBoxOptionService lunchBoxOptionService;
     private final FileUtils fileUtils;
 
-//     도시락
-//    목록
+//     도시락 목록
     @GetMapping("lunchboxList")
-    public ModelAndView lunchBoxList(@PageableDefault(size = 1, page = 0) Pageable pageable, LunchBoxSearch lunchBoxSearch) {
+    public ModelAndView lunchBoxList(@PageableDefault(size = 2, page = 0) Pageable pageable, LunchBoxSearch lunchBoxSearch) {
         ModelAndView mv = new ModelAndView();
 
         Page<LunchBoxDTO> lunchBoxList = lunchBoxService.lunchBoxList(pageable, lunchBoxSearch);
 
+        int startNum = lunchBoxList.getPageable().getPageNumber() * lunchBoxList.getPageable().getPageSize() + 1;
+        mv.addObject("startNum", startNum);
         mv.addObject("lunchBoxList", lunchBoxList);
         return mv;
     }
@@ -82,7 +83,7 @@ public class BoLunchBoxController {
         LunchBox lunchBox = lunchBoxService.getLunchBoxWithOptionByLunchBoxId(id);
         mv.addObject("lunchBox",lunchBox);
 
-        mv.setViewName("admin/lunchbox/lunchboxDetail");
+        mv.setViewName("/admin/lunchbox/lunchboxDetail");
 
         return mv;
     }
@@ -130,20 +131,9 @@ public class BoLunchBoxController {
                 e.printStackTrace();
             }
         }
-//        log.info("lunchBoxDTO1 : {}", lunchBoxDTO.toString());
-//        if(lunchBoxDTO.getLunchBoxOptions() != null && lunchBoxDTO.getLunchBoxOptions().size() > 0) {
-//            log.info("lunchBoxDTO2 : {}", lunchBoxDTO.toString());
-//            //null 체크
-//            for (int i = 0; i < lunchBoxDTO.getLunchBoxOptions().size(); i++) {
-//                log.info("lunchBoxDTO3 : {}", lunchBoxDTO.toString());
-//                lunchBoxDTO.getLunchBoxOptions().get(i).setLunchbox(lunchBoxService.toEntity(lunchBoxDTO));
-////                lunchBoxDTO.getLunchBoxOptions().get(i).getLunchbox().setLunchboxTitle(lunchBoxDTO.getLunchboxTitle());
-////                lunchBoxDTO.getLunchBoxOptions().get(i).getLunchbox().setLunchboxThumbNailingIMG(lunchBoxDTO.getLunchboxThumbNailingIMG());
-////                lunchBoxDTO.getLunchBoxOptions().get(i).getLunchbox().setPrice(lunchBoxDTO.getPrice());
-////                lunchBoxDTO.getLunchBoxOptions().get(i).getLunchbox().setId(lunchBoxDTO.getId());
-//            }
-//        }
-
+        for(int i = 0; i < lunchBoxDTO.getLunchBoxOptions().size(); i++){
+            lunchBoxDTO.getLunchBoxOptions().get(i).setLunchbox(lunchBoxService.toEntity(lunchBoxDTO));
+        }
         log.info("lunchBoxDTO4 : {}", lunchBoxDTO.toString());
         Long id = lunchBoxService.LunchBoxUpdate(lunchBoxDTO);
 

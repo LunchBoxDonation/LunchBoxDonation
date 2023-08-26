@@ -8,4 +8,9 @@ public interface ReviewService {
     List<Review> findByLunchboxId(Long lunchboxId);
     Review write(Long lunchboxId, String reviewContent);
 
+    Review update(Long lunchboxId, String reviewContent);
+
+    public void deleteReview(Long Id);
+
+    Long getReviewCountByLunchboxId(Long lunchboxId);
 }
