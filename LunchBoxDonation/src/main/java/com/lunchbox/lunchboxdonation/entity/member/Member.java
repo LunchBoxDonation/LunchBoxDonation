@@ -14,21 +14,20 @@ import javax.persistence.*;
 public class Member extends Timestamp {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
-    @NonNull
-    @Column(unique = true)
+    @Column(unique = true,nullable = false)
     private String memberId;
 
-    @NonNull
-    @Column
+    @Column(unique = true,nullable = false)
     private String memberPw;
 
-    @NonNull
-    @Column
+    @Column(unique = true,nullable = false)
     private String memberName;
+    @Column(unique = true,nullable = false)
     private String memberEmail;
+    @Column(unique = true,nullable = false)
     private String memberPhoneNumber;
 //    private LocalDateTime modDate;
 
